@@ -23,4 +23,23 @@
     lamp - linux
     mamp-  mac
 */
+
+/* 
+    <?php //yor code ?> podemos escribir nuestro codigo entre estas etiquetas
+    <?php        
+        //your code
+    ?>
+    tambien podemos hacerlo de esta forma
+
+
+    al crear los files no se pueden usar espacios y la terminacion siempre sera .php
+
+    impresion
+    <?php echo 'hello world'; ?>        //con simple o dos comillas
+    concatenacion
+    <?php echo "hello"."world";?>       // con el punto
+    calcular
+    <?php echo 25+75; ?>
+
+*/
 ?>
