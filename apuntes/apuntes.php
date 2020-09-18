@@ -41,5 +41,10 @@
     calcular
     <?php echo 25+75; ?>
 
+    request_ Response Cycle
+    php trabaja en request y respuesta en el buscador,
+     el navegador toma el request y lo encia al server 
+     en el server esta instalado apache, busca el archivo, encuentra el hello.php, pasa a un proceso en php verifica si necesita interaccion con una bd y devuelve el html al navegador donde se puede visualizar un resultado.
+     
 */
 ?>
