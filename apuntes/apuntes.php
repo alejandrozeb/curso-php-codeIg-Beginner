@@ -45,6 +45,21 @@
     php trabaja en request y respuesta en el buscador,
      el navegador toma el request y lo encia al server 
      en el server esta instalado apache, busca el archivo, encuentra el hello.php, pasa a un proceso en php verifica si necesita interaccion con una bd y devuelve el html al navegador donde se puede visualizar un resultado.
-     
+     data types:
+     String, Integer, float, boolean, Array, Object, NUll, Resource.
+     Variables
+     es la representacion de un valor
+    las variables comienzan por $ seguidas por una letra o un underscore barra baja _
+    puede contener letras numeros or dashes /
+    se restringuen los espacios
+    es case-sensitive con esto quiero decir que reconoce entre mayusculas y minusculas.
+    casoa a prestar atencion
+    $this-variable      no es recomendable
+    $_book el underscore al inicio de la variable cumple otra funccion en php
+    $__book de la misma forma el lenguaje puede interpretarlo de difrente manera.
+
+    String
+
+
 */
 ?>
