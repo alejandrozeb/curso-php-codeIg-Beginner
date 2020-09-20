@@ -14,8 +14,6 @@
             echo "$num es menor o igual a $user_input";
         }else if($num >= $user_input){
             echo "$num es mayor o igual a $user_input";
-        }else{
-            echo 'Son distintos';
         }
     }else {
         echo "Erroe en la informacion";
