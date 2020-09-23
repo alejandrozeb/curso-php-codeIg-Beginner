@@ -10,5 +10,17 @@
     esta es la estructura normal de una tabla en una bd donde table puede ser la pelota row un atibuto y la columna el dato
 
     puedes revisar mas buscando Basededatos relacional y base de datos no relacional que son las que mas se usan en desarrollo web
+
+    crearemos la siguiente tabla en mysql
+
+    employes
+    e_id(int autoincremet) e_name(255,varchar) e_email(255,varchar) e_phone(15,int)
+
+    luego insertamos los siguientes datps
+
+    jhon doe    jhondoe@correo  15155
+    jane doe    janedoe@correo  15155
+
+    el id es autoincremental
 */
 ?>
