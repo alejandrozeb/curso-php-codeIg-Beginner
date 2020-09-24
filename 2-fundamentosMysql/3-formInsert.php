@@ -27,6 +27,8 @@
         </tr>
     </table>
     </form>
+    <!-- para mostras -->
+    <p><a href="4-employes.php">Employees</a></p>
 <?php
     if(isset($_POST['e_add'])){
         $e_name = $_POST['e_name'];
