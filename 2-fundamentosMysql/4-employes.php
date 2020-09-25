@@ -15,6 +15,7 @@
             <td> EMAIL </td>
             <td> PHONE </td>
             <td> DETAILS </td>
+            <td> UPDATE </td>
         </tr>
     
     <?php
@@ -32,6 +33,7 @@
                 <td><?php echo $employee['e_email']?></td>
                 <td><?php echo $employee['e_phone']?></td>
                 <td><a href="5-details.php?e_id=<?php echo $employee['e_id'];?>">Details</a></td>
+                <td><a href="6-update.php?e_id=<?php echo $employee['e_id'];?>">Update</a></td>
             </tr>
     <?php
             }
