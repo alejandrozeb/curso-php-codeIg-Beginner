@@ -1,3 +1,4 @@
+<?php  require 'conn.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -41,7 +42,34 @@
         </div>
     </div>
     <!-- register -->
+    <?php
 
+        //creamos la bd demo con el siguiente detalle:
+        /* Table: users
+            Campos:
+            u_id     autoincrement primary key
+            u_name   VARCHAR 255
+            u_email VARCHAR 255
+            u_pass  VARCHAR 255
+        */
+
+        if(isset($_POST['u_reg'])){
+            $u_email = $_POST['u_email'];
+            $u_name = $_POST['u_name'];
+            $u_pass = md5($_POST['u_pass']); //necesitamos encriptar con md5
+
+            $sql="INSERT INTO users (u_email,u_name,u_pass) VALUES ('$u_email','$u_name','$u_pass')";
+
+            if(mysqli_query($conn,$sql)){
+                echo "<script>alert('Registrado correctamente') </script>";
+            }else{
+                echo "Error: ".$sql."<br>".mysqli_error($conn);
+            }
+
+
+        }
+
+    ?>
   
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
