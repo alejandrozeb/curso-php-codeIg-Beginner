@@ -1,3 +1,4 @@
+<?php require 'conn.php';?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -38,7 +39,19 @@
         </div>
     </div>
     <!-- login -->
+    <?php
+        if(isset($_POST['u_login'])){
+            $u_name = $_POST['u_name'];
+            $u_pass = md5($_POST['u_pass']);
 
+            echo $u_name;
+            echo '<br>';
+            echo $u_pass;
+
+            $sql="SELECT * FROM users WHERE u_name='$u_name'   ";
+            $result= mysqli_query($conn,$sql);
+        }
+    ?>
  
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
