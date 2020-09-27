@@ -44,12 +44,25 @@
             $u_name = $_POST['u_name'];
             $u_pass = md5($_POST['u_pass']);
 
-            echo $u_name;
+           /*  echo $u_name;
             echo '<br>';
-            echo $u_pass;
+            echo $u_pass; */
 
             $sql="SELECT * FROM users WHERE u_name='$u_name'   ";
             $result= mysqli_query($conn,$sql);
+
+            if(mysqli_num_rows($result)>0){
+                while ($user = mysqli_fetch_assoc($result)) //de result saca un row a user
+                {   
+                    # code...
+                    if($u_name == $user['u_name'] && $u_pass == $user['u_pass']){
+                        //echo 'Success';
+                        header('Location: dash.php');
+                    }else{
+                        echo "<script>alert('Error username or password incorrect') </script>";
+                    }
+                }
+            }
         }
     ?>
  
