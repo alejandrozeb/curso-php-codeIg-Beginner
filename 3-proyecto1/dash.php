@@ -18,7 +18,8 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Welcome</h1>
+    <p><a href="logout.php">Log Out</a></p>
+    <h1>Welcome <?php echo $_SESSION['u_name'] ?></h1>
     
     <!-- main content -->
 
