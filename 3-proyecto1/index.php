@@ -1,4 +1,6 @@
-<?php require 'conn.php';?>
+<?php require 'conn.php';
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -57,6 +59,8 @@
                     # code...
                     if($u_name == $user['u_name'] && $u_pass == $user['u_pass']){
                         //echo 'Success';
+                        //agragamos detalles de la session
+                        $_SESSION['u_name'] = $u_name;
                         header('Location: dash.php');
                     }else{
                         echo "<script>alert('Error username or password incorrect') </script>";

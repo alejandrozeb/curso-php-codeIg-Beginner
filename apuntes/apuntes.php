@@ -60,6 +60,8 @@
 
     String
 
+    Al realizar el register podemos encriptar con md5() y debemos gaudarla de esa forma al realizar el login de igual manera encriptamos la contraseña y comparamos las contraseñas encriptadas.
+
 
 */
 ?>

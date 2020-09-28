@@ -1,3 +1,9 @@
+<?php  
+  session_start();
+  if(!$_SESSION['u_name']){ //si la session termina cargamos de nuevo el login, por defecto dura 1440 seg que son 24 minutos.
+    header('Location: index.php');
+  }
+?>
 <!doctype html>
 <html lang="en">
   <head>
