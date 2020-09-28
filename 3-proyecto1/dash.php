@@ -26,6 +26,38 @@
     <h1>Welcome <?php echo $_SESSION['u_name'] ?></h1>
     
     <!-- main content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">Employees</div>
+                <ul class="list-group">
+                  <li class="list-group-item">
+                      <a href="#">add New Employee</a>
+                  </li>
+                  <li class="list-group-item">
+                      <a href="#">View all Employees</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">Employess List</div>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>ID</td>
+                        <td>Name</td>
+                        <td>Details</td>
+                        <td>Edit</td>
+                        <td>Deleted</td>
+                    </tr>
+                </table>  
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- main content -->
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
