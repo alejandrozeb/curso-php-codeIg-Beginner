@@ -62,6 +62,10 @@
 
     Al realizar el register podemos encriptar con md5() y debemos gaudarla de esa forma al realizar el login de igual manera encriptamos la contraseña y comparamos las contraseñas encriptadas.
 
+    //encriptando una pagina con sessions
+    cuando realizamos la session en login, el dash ya no es accecible a menos que inicies una session con tu usuario y contraseña.
 
+    Despues de que tenemos la session podemos usar la sessino en otras paginas referenciadas.
+    
 */
 ?>

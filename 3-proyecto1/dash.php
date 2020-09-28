@@ -18,7 +18,11 @@
     <![endif]-->
   </head>
   <body>
-    <p><a href="logout.php">Log Out</a></p>
+
+    <!-- nav  -->
+    <?php require 'nav.php'; ?> <!-- llamamos a nav -->
+    <!-- nav -->
+    
     <h1>Welcome <?php echo $_SESSION['u_name'] ?></h1>
     
     <!-- main content -->
