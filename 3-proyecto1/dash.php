@@ -64,7 +64,7 @@
                           <tr>
                             <td><?php echo $employe['e_id'];?></td>
                             <td><?php echo $employe['e_name'];?></td>
-                            <td><a href="single_employee.php" class="btn btn-xs btn-info btn-block">Details</a></td>
+                            <td><a href="single_employee.php?e_id=<?php echo $employe['e_id'];?>" class="btn btn-xs btn-info btn-block">Details</a></td>
                             <td><a href="#" class="btn btn-xs btn-warning btn-block">Edit</a></td>
                             <td><a href="#" class="btn btn-xs btn-Danger btn-block">Deleted</a></td>
                           </tr>

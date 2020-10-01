@@ -46,34 +46,39 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Employess List</div>
                 <table class="table table-bordered">
-                    <tr>
-                        <td>ID</td>
-                        <td>Name</td>
-                        <td>Details</td>
-                        <td>Edit</td>
-                        <td>Deleted</td>
-                    </tr>
                     <?php
-                     $sql="SELECT * FROM employes";
+                    $id = $_GET['e_id'];  //sacamos de la URL
+                     $sql="SELECT * FROM employes WHERE e_id=$id";
                      $result= mysqli_query($conn,$sql);
          
                      if(mysqli_num_rows($result)>0){
                          while ($employe = mysqli_fetch_assoc($result)) //de result saca un row a user
                          {  ?>
-
                           <tr>
-                            <td><?php echo $employe['e_id'];?></td>
+                            <th style="width: 130px;">Name</th>
                             <td><?php echo $employe['e_name'];?></td>
-                            <td><a href="single_employee.php" class="btn btn-xs btn-info btn-block">Details</a></td>
-                            <td><a href="#" class="btn btn-xs btn-warning btn-block">Edit</a></td>
-                            <td><a href="#" class="btn btn-xs btn-Danger btn-block">Deleted</a></td>
                           </tr>
-
+                          <tr>
+                            <th>Email</th>
+                            <td><?php echo $employe['e_email'];?></td>
+                          </tr>
+                          <tr>
+                            <th>Phone</th>
+                            <td><?php echo $employe['e_phone'];?></td>
+                          </tr>
+                          <tr>
+                             <td>
+                                <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="#" class="btn btn-sm btn-Danger">Deleted</a>
+                            </td>
+                          </tr>
                         <?php }
                      }else{
                        echo '0 results';
                      }
                     ?>
+                  
+
                 </table>  
             </div>
           </div>
