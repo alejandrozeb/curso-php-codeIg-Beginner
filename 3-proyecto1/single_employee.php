@@ -68,7 +68,7 @@
                           </tr>
                           <tr>
                              <td>
-                                <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="single_employee_edit.php?e_id=<?php echo $employe['e_id'];?>" class="btn btn-sm btn-warning">Edit</a>
                                 <a href="#" class="btn btn-sm btn-Danger">Deleted</a>
                             </td>
                           </tr>
