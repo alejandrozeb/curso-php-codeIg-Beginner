@@ -66,6 +66,22 @@
     cuando realizamos la session en login, el dash ya no es accecible a menos que inicies una session con tu usuario y contraseña.
 
     Despues de que tenemos la session podemos usar la sessino en otras paginas referenciadas.
-    
+    hosting
+    www.000webhost.com
+    para paginas de php mysql
+    alejandrophp
+    @qZ^!Ac!M3JL4LGFcN55  
+
+    db name demo        id15018372_demo
+    datauser alejandro  id15018372_alejandro 
+    pass: 0ldR{4WZ<u3[oK$!
+    bhost: localhost
+
+    //exportamos la bd de nuestro proyecto
+    https://alejandrophp.000webhostapp.com/Proyecto/index.php
+
+    realize cambios en los header
+    echo "<script> window.location.href='https://alejandrophp.000webhostapp.com/Proyecto/dash.php';</script>";
+    se usa js para realizar la el location
 */
 ?>
