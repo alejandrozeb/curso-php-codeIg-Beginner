@@ -91,5 +91,22 @@
     developed by: British Columbia <Ins
     Initial realease: 2006, febrero 28
     stable realese: 4.00/2020-02-24
+    requirements
+    html
+    php&mysql
+    POO
+    Bootstrap
+    Code editor
+
+    Usaremos Codeigniter 3
+    descargamos de su pagina el realese estable 
+    https://codeigniter.com/download
+    y en la carpeta ci copiamos los archivo sin la necesidad de instalar algo y accedemosd esde el localHost
+    http://localhost/curso-php/4-ci/
+    en mi caso
+
+    Codeigniter usa MVC explicacion en curso de js seccion de patrones de diseño.
+
+    
 */
 ?>
