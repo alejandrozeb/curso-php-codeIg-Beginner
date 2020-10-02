@@ -83,5 +83,13 @@
     realize cambios en los header
     echo "<script> window.location.href='https://alejandrophp.000webhostapp.com/Proyecto/dash.php';</script>";
     se usa js para realizar la el location
+
+    CODEIGNITER es un framework de php
+    open source
+    rapid development web framework
+    dynamic web sites with PHP
+    developed by: British Columbia <Ins
+    Initial realease: 2006, febrero 28
+    stable realese: 4.00/2020-02-24
 */
 ?>
