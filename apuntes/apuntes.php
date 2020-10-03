@@ -181,9 +181,22 @@
 
      Podemos enviar data de la siguiente forma
         http://localhost/curso-php/4-ci/index.php/welcome/bye_world/25
+        existen dos formas de enviar informacion 
 
+        una es por segmentos uri
+        revisar vista bye_world
 
+        y la otra con URL
+        base url();
+        nos devuelve esta url.
+        http://localhost/curso-php/4-ci/ç
 
+        site_url();
+
+        http://localhost/curso-php/4-ci/index.php
+
+        nos devuleve el todo el url sin los datos extra.
+        
 
 */
 ?>
