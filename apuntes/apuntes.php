@@ -116,6 +116,52 @@
     La mejor recomendacion para el uso es no tocarlo, almacena el funcionamiento de codeigniter.
 
     USERGUIDE
-    es la guia completa para usar paso a paso la documentacion que nos proporciona codeigniter.    
+    es la guia completa para usar paso a paso la documentacion que nos proporciona codeigniter.  
+    
+    Configuracion Inicial.
+    en aplication-> autoload
+
+    Podemos cargar que helpers, modelos,librerias se cargaran.
+    el librerias podemos usar email, session,database.
+
+    si queremos usar url o file en nuestro proyecto tambien los podemos cargar.
+
+    CONFIG
+
+    baseurl-> puedo cambiar donde sera mi home en mi proyecto este es por defecto
+    http://localhost/curso-php/4-ci/
+
+    otras formas de escribir
+
+    http://example.com/index.php/welcome
+	 *	- or -
+	 * 		http://example.com/index.php/welcome/index
+      
+     
+    al final se sobreentiende que apunta a un index.php
+    trabaja de la siguiente forma
+    localhost es nuestro server local
+    curso-phph es una carpeta creadada para almacemar el curso
+    4-ci carpeta creada para almacenar nuestro proyecto.
+    welcome es nuestro controlador
+    index es la funcion que almacena nuestra vista
+
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    welcome no sle al en la url del localhost por que esta coonfigurada como por dfecto en rutas.
+
+    index tambien esta configurada comonuestra vista por defecto por lo tanto tampoco es visible.
+    !!!!!!!!!!!!!!!!!!
+
+
+    index_page define cual sera nuestro index en el proyecto.
+     
+    DATABASE:
+    TENEMOS HOST y otras variables propias de una database,
+    podemos aumentar la variable del port 
+    para darle una.
+
+    ROUTES
+    configuramos el controlador y funcion que se mostrara por defecto.
+
 */
 ?>
