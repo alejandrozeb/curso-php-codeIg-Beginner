@@ -106,7 +106,16 @@
     en mi caso
 
     Codeigniter usa MVC explicacion en curso de js seccion de patrones de diseño.
+    estructura de un proyecto en codeigniter:
+    los archivos externos no son necesarios para nuestra aplicacion excepto el index.php
+    apliaccion folder es el principal donde tenemos configuracion de cache, de bd, controladores, vistas(MVC), modelos librerias, hooks.
+    en third party podemos almacenar una herramienta extra que usemos.
+    nuestro proyecto se crea enteramente en la carpeta aplicacion.
 
-    
+    system folder.
+    La mejor recomendacion para el uso es no tocarlo, almacena el funcionamiento de codeigniter.
+
+    USERGUIDE
+    es la guia completa para usar paso a paso la documentacion que nos proporciona codeigniter.    
 */
 ?>
