@@ -7,5 +7,11 @@
 </head>
 <body>
     HELLO THERE!, Bye World.
+
+    <?php
+    //identifica el tercer segmento de la url
+    $data = $this->uri->segment(3);
+    echo $data;
+    ?>
 </body>
 </html>

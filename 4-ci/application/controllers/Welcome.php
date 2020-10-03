@@ -9,9 +9,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
-	public function bye_world(){
+	public function bye_world($data){
 		//echo 'Bye world';
 		//cargamos la vista
-		$this->load->view('bye_world');
+		$this->load->view('bye_world',$data);
+		//recibimos data
 	}
 }

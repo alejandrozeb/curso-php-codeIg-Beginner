@@ -174,6 +174,16 @@
 
 
     en caso que no exista un controldor funcion o vista podemos dar por defecto el error 404 que codeigniter usa por defecto.
-    
+
+    parametros adicionales en controladores
+
+     http://localhost/curso-php/4-ci/index.php/welcome/bye_world 
+
+     Podemos enviar data de la siguiente forma
+        http://localhost/curso-php/4-ci/index.php/welcome/bye_world/25
+
+
+
+
 */
 ?>
