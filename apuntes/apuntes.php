@@ -136,13 +136,16 @@
     http://example.com/index.php/welcome
 	 *	- or -
 	 * 		http://example.com/index.php/welcome/index
-      
+     http://localhost/curso-php/4-ci/index.php/welcome/bye_world 
      
+
+
     al final se sobreentiende que apunta a un index.php
     trabaja de la siguiente forma
     localhost es nuestro server local
     curso-phph es una carpeta creadada para almacemar el curso
     4-ci carpeta creada para almacenar nuestro proyecto.
+    index.php es el archivo que esta afuera de nustras carpetas tiene configuracion para trabajar con los compenentes de codeigniter.
     welcome es nuestro controlador
     index es la funcion que almacena nuestra vista
 
@@ -163,5 +166,14 @@
     ROUTES
     configuramos el controlador y funcion que se mostrara por defecto.
 
+    CONTROLADORES Y VISTAS
+    MVC
+    Modelo 
+    Vista 
+    Controlador
+
+
+    en caso que no exista un controldor funcion o vista podemos dar por defecto el error 404 que codeigniter usa por defecto.
+    
 */
 ?>
