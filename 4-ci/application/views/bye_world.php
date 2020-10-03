@@ -10,6 +10,7 @@
 
     <?php
     //identifica el tercer segmento de la url
+    //el segmento 1 es normalmente el controlador a aprtir del 3 podemos enviar data 
     $data = $this->uri->segment(3);
     echo $data;
     ?>
