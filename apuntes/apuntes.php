@@ -197,6 +197,8 @@
 
         nos devuleve el todo el url sin los datos extra.
         
-
+        Añadimos Boostrap a nuestro proyecto
+        https://getbootstrap.com/docs/3.4/getting-started/#download
+        descargamos y lo copiamos a assets
 */
 ?>
