@@ -218,5 +218,8 @@
         creamos un archivo llamado .htaccess
         y copias el contenido del repositorio
         y listo.
+
+
+        en nuestro login trabajaremos con el helper de login de codeigniter
 */
 ?>
