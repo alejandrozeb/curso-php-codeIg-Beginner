@@ -200,5 +200,23 @@
         Añadimos Boostrap a nuestro proyecto
         https://getbootstrap.com/docs/3.4/getting-started/#download
         descargamos y lo copiamos a assets
+
+        para crear un controlador el archivo debe llevar como primera letra 
+        una mayuscula
+
+        rutas de codeigniter
+        http://localhost/curso-php/4-ci/index.php/Home/index
+         esta es nuetsra ruta qye tenemos pero que tal si no queremos el index.php que nos proporciona codeigniter
+         http://localhost/curso-php/4-ci/Home/index
+
+         nos sale un error para este fin debemos realizar algunas configuraciones.
+
+        buscamos en goog de le zinfoatic y en github entramos al repositorio removeindex.
+
+        https://github.com/zinfomatic/remove-index.php-from-codeigniter
+
+        creamos un archivo llamado .htaccess
+        y copias el contenido del repositorio
+        y listo.
 */
 ?>
