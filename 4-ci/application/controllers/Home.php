@@ -38,4 +38,25 @@ class Home extends CI_Controller {
 		}		
 	}
 
+	public function register_process(){
+		if($this->input->post('u_reg')){	//va el nombre del formulario
+			echo "Success";
+			$u_email=$this->input->post('u_email');
+			$u_name=$this->input->post('u_name');
+			$u_pass=md5($this->input->post('u_pass'));
+
+			$user_data = array(
+				'u_email' => $u_email,
+				'u_name' => $u_name,
+				'u_pass' => $u_pass,
+			);
+
+			echo "<pre>";
+			var_dump($user_data);
+			echo "</pre>";
+		}else{
+			redirect('home/register','refresh');	//redireccionamos a home/index
+		}
+	}
+
 }

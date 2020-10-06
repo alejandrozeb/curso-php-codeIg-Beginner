@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="panel panel-default" style="margin-top: 50px">
                   <div class="panel-heading">Register</div>
                   <div class="panel-body">
-                      <?php echo form_open('home'); //link al url del controlador que recibe los datos?>
+                      <?php echo form_open('home/register_process'); //link al url del controlador que recibe los datos?>
                       <div class="form-group">
                           <input type="email" name="u_email" class="form-control input-sm" placeholder="Email" required>
                       </div>
