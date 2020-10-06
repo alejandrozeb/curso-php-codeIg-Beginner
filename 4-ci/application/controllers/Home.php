@@ -13,6 +13,12 @@ class Home extends CI_Controller {
 		//cargamos el footer
 		$this->load->view('inc/footer');
 	}
+	public function register(){
+		$this->load->view('inc/header');
+		$this->load->view('register');
+		$this->load->view('inc/footer');
+	}
+
 	public function login_process(){
 		if($this->input->post('u_Login')){	//va el nombre del formulario
 			echo "Success";
