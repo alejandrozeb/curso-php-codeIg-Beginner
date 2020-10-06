@@ -221,5 +221,12 @@
 
 
         en nuestro login trabajaremos con el helper de login de codeigniter
+
+        DATABASE estructura
+        u_id        int     primary key
+        u_date      datetime
+        u_email     varvhar 255 
+        u_name      varchar 255
+        u_pass      varvhar 255
 */
 ?>
