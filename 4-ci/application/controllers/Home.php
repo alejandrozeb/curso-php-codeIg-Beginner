@@ -2,7 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
+	public function __construct(){
+		parent::__construct();
 
+		$this->load->model('Users');
+
+	} 
 
 	public function index()
 	{
@@ -50,12 +55,13 @@ class Home extends CI_Controller {
 				'u_name' => $u_name,
 				'u_pass' => $u_pass,
 			);
-
-			echo "<pre>";
+			$this->Users->insert_user($user_data);
+			redirect('home','refresh');
+			/* echo "<pre>";
 			var_dump($user_data);
-			echo "</pre>";
+			echo "</pre>"; */
 		}else{
-			redirect('home/register','refresh');	//redireccionamos a home/index
+			redirect('home/register','refresh');	
 		}
 	}
 
