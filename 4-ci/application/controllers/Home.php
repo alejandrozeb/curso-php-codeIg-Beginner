@@ -26,7 +26,6 @@ class Home extends CI_Controller {
 
 	public function login_process(){
 		if($this->input->post('u_Login')){	//va el nombre del formulario
-			echo "Success";
 			$u_name=$this->input->post('u_name');
 			$u_pass=md5($this->input->post('u_pass'));
 
@@ -34,10 +33,19 @@ class Home extends CI_Controller {
 				'u_name' => $u_name,
 				'u_pass' => $u_pass,
 			);
+			$users_list = $this->db->get_where('users', array('u_name' => $user_data['u_name']));
+			foreach($users_list->result() as $user){
+				if($user_data['u_name'] == $user->u_name && $user_data['u_pass'] == $user->u_pass){ 
+					echo "success";
+				}else{
+					echo "<script>alert('Username or Password Incorrect')</script>";
+					redirect('home','refresh');
+				}
+			}
 
-			echo "<pre>";
+		/* 	echo "<pre>";
 			var_dump($user_data);
-			echo "</pre>";
+			echo "</pre>"; */
 		}else{
 			redirect('home','refresh');	//redireccionamos a home/index
 		}		
