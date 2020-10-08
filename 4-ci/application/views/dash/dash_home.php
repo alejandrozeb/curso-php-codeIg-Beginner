@@ -24,20 +24,10 @@ if(!$_SESSION['u_name']){
         <div class="container">
           <div class="row">
               <div class="col-lg-3 col-md-3"></div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">Employees Action</div>
-                  <div class="list-group">
-                    <a href="#" class="list-group-item">Add Employee</a>
-                    <a href="#" class="list-group-item">Employees List</a>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">Jobs Action</div>
-                  <div class="list-group">
-                    <a href="#" class="list-group-item">Add Jobs</a>
-                    <a href="#" class="list-group-item">Jobs List</a>
-                  </div>
-                </div>
+                <!-- sidebar -->
+                <?php $this->load->view('dash/inc/sidebar'); ?>
+                <!-- sidebar -->
+                
               <div class="col-lg-9 col-md-9"></div>
           </div>
         </div>
