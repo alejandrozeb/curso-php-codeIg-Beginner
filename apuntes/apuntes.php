@@ -228,5 +228,12 @@
         u_email     varvhar 255 
         u_name      varchar 255
         u_pass      varvhar 255
+
+        para agregar trabajos
+        jobs
+         u_id        int     primary key
+        u_date      datetime    current_time
+        u_email     varvhar 255
+        
 */
 ?>
