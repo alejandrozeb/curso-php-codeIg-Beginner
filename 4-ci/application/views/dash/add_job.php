@@ -36,12 +36,12 @@ if(!$_SESSION['u_name']){
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Job Name</label>
                                     <div class="col-sm-10">
-                                    <input type="text" class="form-control input-sm" placeholder="Job Name">
+                                    <input type="text" name="j_name" class="form-control input-sm" placeholder="Job Name">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <input type="submit" class="btn btn-sm btn-success" value="Add_Job">
+                                        <input type="submit" name="add_job" class="btn btn-sm btn-success" value="Add_Job">
                                     </div>
                                 </div>
                             </form>
