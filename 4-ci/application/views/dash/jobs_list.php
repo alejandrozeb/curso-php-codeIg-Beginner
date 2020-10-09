@@ -43,7 +43,7 @@ if(!$_SESSION['u_name']){
                         <tr>
                             <th><?php echo $job->j_id?></th>
                             <th><?php echo $job->j_name?></th>
-                            <th><a href="#" class="btn btn-warning btn-block btn-xs">Edit</a></th>
+                            <th><a href="<?php site_url(); ?>update_job/<?php echo $job->j_id; ?>" class="btn btn-warning btn-block btn-xs">Edit</a></th>
                             <th><a href="#" class="btn btn-danger btn-block btn-xs">Delete</a></th>
                         </tr>        
                         
