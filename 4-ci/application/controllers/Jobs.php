@@ -23,7 +23,11 @@ class Jobs extends CI_Controller {
             );
 
             $this->Jobs_modal->add_job($jobs_data);
-            echo "success";
+            //echo "success";
+            redirect('jobs/view_jobs','refresh');
         }
     }
+    public function view_jobs(){
+        $this->load->view('dash/jobs_list');
+    } 
 }
