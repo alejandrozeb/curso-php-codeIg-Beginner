@@ -30,8 +30,22 @@ class Jobs extends CI_Controller {
     public function view_jobs(){
         $this->load->view('dash/jobs_list');
     } 
-    
+
     public function update_job($j_id){
         $this->load->view('dash/update_job',$j_id);
+    }
+
+    public function update_process_job($j_id){
+        if($this->input->post('update_job')){
+            $j_name= $this->input->post('j_name');
+            $job_details = array(
+                'j_name' => $j_name
+            );
+
+            $this->db->where('j_id',$j_id);
+            $this->db->update('jobs', $job_details);
+
+            redirect('jobs/view_jobs', 'refresh');
+        }
     }
 }
