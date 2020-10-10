@@ -48,4 +48,10 @@ class Jobs extends CI_Controller {
             redirect('jobs/view_jobs', 'refresh');
         }
     }
+
+    public function delete_job($j_id){
+          $this->db->where('j_id',$j_id);
+          $this->db->delete('jobs');
+          redirect('jobs/view_jobs', 'refresh'); 
+    }
 }
