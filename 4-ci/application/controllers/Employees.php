@@ -21,31 +21,21 @@ class Employees extends CI_Controller {
             redirect('jobs/view_jobs','refresh');
         } */
     }
-    public function view_jobs(){
-        $this->load->view('dash/jobs_list');
-    } 
-
-    public function update_job($j_id){
-        $this->load->view('dash/update_job',$j_id);
-    }
-
-    public function update_process_job($j_id){
-        if($this->input->post('update_job')){
-            $j_name= $this->input->post('j_name');
-            $job_details = array(
-                'j_name' => $j_name
-            );
-
-            $this->db->where('j_id',$j_id);
-            $this->db->update('jobs', $job_details);
-
-            redirect('jobs/view_jobs', 'refresh');
+    public function add_employee_process(){
+        if($this->input->post('add_employee')){
+            $e_name = $this->input->post('e_name');
+            $e_email = $this->input->post('e_email');
+            $e_phone = $this->input->post('e_phone');
+            $e_job = $this->input->post('e_job');
         }
-    }
-
-    public function delete_job($j_id){
-          $this->db->where('j_id',$j_id);
-          $this->db->delete('jobs');
-          redirect('jobs/view_jobs', 'refresh'); 
+        $employee_details = array(
+            '$e_name' => $e_name,
+            '$e_email' => $e_email,
+            '$e_phone' => $e_phone,
+            '$e_job' => $e_job,
+        );
+        echo '<br>';
+        echo print_r($employee_details);
+        echo '<br>';
     }
 }

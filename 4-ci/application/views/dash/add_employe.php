@@ -32,7 +32,7 @@ if(!$_SESSION['u_name']){
                     <div class="panel panel-default">
                         <div class="panel-heading">Add Employee</div>
                         <div class="panel-body">
-                            <?php echo form_open('','class="form-horizontal"'); ?>
+                            <?php echo form_open('employees/add_employee_process','class="form-horizontal"'); ?>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Name</label>
                                     <div class="col-sm-10">
