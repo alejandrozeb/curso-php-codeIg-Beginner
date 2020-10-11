@@ -36,12 +36,40 @@ if(!$_SESSION['u_name']){
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Name</label>
                                     <div class="col-sm-10">
-                                    <input type="text" name="e_name" class="form-control input-sm" placeholder="Job Name">
+                                    <input type="text" name="e_name" class="form-control input-sm" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Email ID</label>
+                                    <div class="col-sm-10">
+                                    <input type="text" name="e_email" class="form-control input-sm" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">Phone</label>
+                                    <div class="col-sm-10">
+                                    <input type="text" name="e_phone" class="form-control input-sm" placeholder="Phone" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label">select Job</label>
+                                    <div class="col-sm-10">
+                                        <select name="e_job" class="form-control input-sm">
+                                                <option value="-"></option>
+                                                <?php
+                                                    $job_list = $this->db->get('jobs');
+                                                    foreach ($job_list->result() as $job) {
+                                                ?>
+                                                <option value="<?php echo $job->j_name; ?>"><?php echo $job->j_name; ?></option>
+                                                <?php
+                                                    }
+                                                ?>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <input type="submit" name="add_job" class="btn btn-sm btn-success" value="Add_Job">
+                                        <input type="submit" name="add_employee" class="btn btn-sm btn-success" value="Add Employee">
                                     </div>
                                 </div>
                             </form>
