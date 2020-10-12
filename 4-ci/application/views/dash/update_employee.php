@@ -33,30 +33,35 @@ $id=$this->uri->segment(3);
                     <div class="panel panel-default">
                         <div class="panel-heading">Add Employee</div>
                         <div class="panel-body">
-                            <?php echo form_open('employees/add_employee_process','class="form-horizontal"'); ?>
+                        <?php
+                                $employee_details=$this->db->get_where('employees',array('e_id'=>$id));
+
+                                foreach ($employee_details->result() as $employee) {
+                        ?>
+                            <?php echo form_open('','class="form-horizontal"'); ?>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Name</label>
                                     <div class="col-sm-10">
-                                    <input type="text" name="e_name" class="form-control input-sm" placeholder="Name" required>
+                                    <input type="text" name="e_name" class="form-control input-sm" placeholder="Name" value="<?php echo $employee->e_name ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Email ID</label>
                                     <div class="col-sm-10">
-                                    <input type="text" name="e_email" class="form-control input-sm" placeholder="Email" required>
+                                    <input type="text" name="e_email" class="form-control input-sm" placeholder="Email" value="<?php echo $employee->e_email ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Phone</label>
                                     <div class="col-sm-10">
-                                    <input type="text" name="e_phone" class="form-control input-sm" placeholder="Phone" required>
+                                    <input type="text" name="e_phone" class="form-control input-sm" placeholder="Phone" value="<?php echo $employee->e_phone ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">select Job</label>
                                     <div class="col-sm-10">
                                         <select name="e_job" class="form-control input-sm">
-                                                <option value="-"></option>
+                                                <option selected><?php echo $employee->e_job ?></option>
                                                 <?php
                                                     $job_list = $this->db->get('jobs');
                                                     foreach ($job_list->result() as $job) {
@@ -68,9 +73,12 @@ $id=$this->uri->segment(3);
                                         </select>
                                     </div>
                                 </div>
+                                <?php
+                                    }
+                                ?>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <input type="submit" name="add_employee" class="btn btn-sm btn-success" value="Add Employee">
+                                        <input type="submit" name="update_employee" class="btn btn-sm btn-success" value="Add Employee">
                                     </div>
                                 </div>
                             </form>
