@@ -235,5 +235,12 @@
         u_date      datetime    current_time
         u_email     varvhar 255
         
+
+        DEPLOYMENT
+        name bd: ciems //id15018372_ciems
+        user ciemsadmin // id15018372_ciemsadmin
+        p]1#~1YFh1v*|<Js  
+        
+        https://alejandrophp.000webhostapp.com/ci/
 */
 ?>
