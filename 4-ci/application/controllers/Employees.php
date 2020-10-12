@@ -39,6 +39,12 @@ class Employees extends CI_Controller {
         redirect('employees', 'refresh');
     }
 
+    public function delete_employee($e_id){
+        $this->db->where('e_id', $e_id);
+        $this->db->delete('employees');
+        redirect('employees','refresh');
+    }
+
     public function add_employee_process(){
         if($this->input->post('add_employee')){
             $e_name = $this->input->post('e_name');
