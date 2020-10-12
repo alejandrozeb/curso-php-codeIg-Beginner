@@ -12,6 +12,9 @@ class Employees extends CI_Controller {
 	{
         $this->load->view('dash/employees_list');
     }
+    public function single_employee($e_id){
+        $this->load->view('dash/single_employee',$e_id);
+    }
     public function add_employees(){
         $this->load->view('dash/add_employe');
     }
