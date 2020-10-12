@@ -10,7 +10,7 @@ class Employees extends CI_Controller {
 
 	public function index()
 	{
-	
+        $this->load->view('dash/employees_list');
     }
     public function add_employees(){
         $this->load->view('dash/add_employe');
@@ -30,6 +30,6 @@ class Employees extends CI_Controller {
         );
 
         $this->Employee_modal->insert_employee($employee_details);
-        echo 'Success';
+        redirect('employees','refresh');
     }
 }
