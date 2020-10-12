@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 if(!$_SESSION['u_name']){
     redirect('home','refresh');
 }
+
+$id=$this->uri->segment(3);
 ?>
 <!doctype html>
 <html lang="en">
@@ -30,23 +32,36 @@ if(!$_SESSION['u_name']){
                 </div>
               <div class="col-lg-9 col-md-9">
                   <table class="table table-bordered">
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Details</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-                        <?php
-                            $employees_list= $this->db->get('employees');
-                            foreach ($employees_list->result() as $employee) {
+                        <?php 
+                            $employee_details = $this->db->get_where('employees', array('e_id'=> $id));
+
+                            foreach ($employee_details->result() as $employee) {
                         ?>
                             <tr>
-                            <td> <?php  echo $employee->e_id?></td>
-                            <td> <?php  echo $employee->e_name?></td>
-                            <td><a href="" class="btn btn-info btn-xs btn-block">Details</a></td>    
-                            <td><a href="" class="btn btn-warning btn-xs btn-block">Edit</a></td>    
-                            <td><a href="" class="btn btn-danger btn-xs btn-block">Delete</a></td>    
+                                <th>Date</th>
+                                <td><?php echo $employee->e_date; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Name</th>
+                                <td><?php echo $employee->e_name; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Email ID</th>
+                                <td><?php echo $employee->e_email; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Phone number</th>
+                                <td><?php echo $employee->e_phone; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Job</th>
+                                <td><?php echo $employee->e_job; ?></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                <a href="#" class="btn btn-warning btn-sm">Edit</a>
+                                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
                             </tr>
                         <?php
                             }
