@@ -45,7 +45,7 @@ if(!$_SESSION['u_name']){
                             <td> <?php  echo $employee->e_id?></td>
                             <td> <?php  echo $employee->e_name?></td>
                             <td><a href="<?php echo site_url() ?>employees/single_employee/<?php  echo $employee->e_id?>" class="btn btn-info btn-xs btn-block">Details</a></td>    
-                            <td><a href="#" class="btn btn-warning btn-xs btn-block">Edit</a></td>    
+                            <td><a href="<?php echo site_url() ?>employees/update_employee/<?php  echo $employee->e_id?>" class="btn btn-warning btn-xs btn-block">Edit</a></td>    
                             <td><a href="#" class="btn btn-danger btn-xs btn-block">Delete</a></td>    
                             </tr>
                         <?php

@@ -18,6 +18,10 @@ class Employees extends CI_Controller {
     public function add_employees(){
         $this->load->view('dash/add_employe');
     }
+    public function update_employee($e_id){
+        $this->load->view('dash/update_employee',$e_id);
+    }
+
     public function add_employee_process(){
         if($this->input->post('add_employee')){
             $e_name = $this->input->post('e_name');
