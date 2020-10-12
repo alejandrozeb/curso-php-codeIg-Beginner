@@ -31,14 +31,14 @@ $id=$this->uri->segment(3);
                 </div>
                 <div class="col-lg-8 col-md-8">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Add Employee</div>
+                        <div class="panel-heading">Update Employee</div>
                         <div class="panel-body">
                         <?php
                                 $employee_details=$this->db->get_where('employees',array('e_id'=>$id));
 
                                 foreach ($employee_details->result() as $employee) {
                         ?>
-                            <?php echo form_open('','class="form-horizontal"'); ?>
+                            <?php echo form_open('employees/update_employee_process/'.$id,'class="form-horizontal"'); ?>
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Name</label>
                                     <div class="col-sm-10">
@@ -78,7 +78,7 @@ $id=$this->uri->segment(3);
                                 ?>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <input type="submit" name="update_employee" class="btn btn-sm btn-success" value="Add Employee">
+                                        <input type="submit" name="update_employee" class="btn btn-sm btn-success" value="Update Employee">
                                     </div>
                                 </div>
                             </form>

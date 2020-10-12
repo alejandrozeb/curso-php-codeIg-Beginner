@@ -21,6 +21,23 @@ class Employees extends CI_Controller {
     public function update_employee($e_id){
         $this->load->view('dash/update_employee',$e_id);
     }
+    public function update_employee_process($e_id){
+        if($this->input->post('update_employee')){
+            $e_name = $this->input->post('e_name');
+            $e_email = $this->input->post('e_email');
+            $e_phone = $this->input->post('e_phone');
+            $e_job = $this->input->post('e_job');
+        }
+        $employee_details = array(
+            'e_name' => $e_name,
+            'e_email' => $e_email,
+            'e_phone' => $e_phone,
+            'e_job' => $e_job
+        );
+        $this->db->where('e_id', $e_id);
+        $this->db->update('employees', $employee_details);
+        redirect('employees', 'refresh');
+    }
 
     public function add_employee_process(){
         if($this->input->post('add_employee')){
