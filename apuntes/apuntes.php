@@ -242,5 +242,9 @@
         p]1#~1YFh1v*|<Js  
         
         https://alejandrophp.000webhostapp.com/ci/
+
+        ***extra
+        para realizar la implementacion de bd utilizo erwin
+        debo agregar el documento, MYSQL2.fet al momento de exporta ademas de una configuracion adjunto las fotografias.
 */
 ?>
